@@ -10,7 +10,7 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -61,7 +61,7 @@
         </div>
       </div>
       <!-- Center Section -->
-      <nav class="flex-1 flex justify-center items-stretch h-full">
+      <nav class="hidden lg:flex flex justify-center items-stretch h-full">
         <ul class="flex items-center space-x-2">
           <li>
             <a class="active flex items-center justify-center h-full px-8 xl:px-12 relative group" href="home.html">
@@ -75,28 +75,29 @@
             </a>
           </li>
           <li>
-            <a class="flex items-center justify-center h-full px-8 xl:px-12 rounded-lg hover:bg-[#C9F3E5] transition-colors duration-200 group" href="#">
+            <a class="flex items-center justify-center h-full px-8 xl:px-12 rounded-lg hover:bg-[#C9F3E5] transition-colors duration-200 group" href="user_page.html">
               <span class="material-symbols-outlined text-3xl text-[#333333]/80 group-hover:text-[#3DDC97]">group</span>
-            </a>
-          </li>
-          <li>
-            <a class="flex items-center justify-center h-full px-8 xl:px-12 rounded-lg hover:bg-[#C9F3E5] transition-colors duration-200 group" href="#">
-              <span class="material-symbols-outlined text-3xl text-[#333333]/80 group-hover:text-[#3DDC97]">chat</span>
-            </a>
-          </li>
-          <li>
-            <a class="flex items-center justify-center h-full px-8 xl:px-12 rounded-lg hover:bg-[#C9F3E5] transition-colors duration-200 group" href="#">
-              <span class="material-symbols-outlined text-3xl text-[#333333]/80 group-hover:text-[#3DDC97]">notifications</span>
             </a>
           </li>
         </ul>
       </nav>
       <!-- Right Section -->
       <div class="flex items-center gap-2">
+        <!-- Chat -->
+        <button class="flex items-center justify-center h-full rounded-lg hover:bg-[#C9F3E5] transition-colors duration-200 group">
+          <span class="material-symbols-outlined text-3xl text-[#333333]/80 group-hover:text-[#3DDC97]"> chat </span>
+        </button>
+        <!-- Notifications -->
+        <button class="flex items-center justify-center h-full rounded-lg hover:bg-[#C9F3E5] transition-colors duration-200 group">
+          <span class="material-symbols-outlined text-3xl text-[#333333]/80 group-hover:text-[#3DDC97]"> notifications </span>
+        </button>
+        <!-- Apps button -->
         <button class="flex items-center justify-center size-10 rounded-full bg-[#D0ECE7]/50 hover:bg-[#C9F3E5] text-[#333333] transition-colors duration-200">
           <span class="material-symbols-outlined">apps</span>
         </button>
+        <!-- Avatar -->
         <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBCkkQUrS1Nzi0NKTCQp0Lmfe8hluXZR9bAF8Qj4VRJobq1jGx9JGyFXRA0NYfbBBoeHJ4vWbAXPwN51uOK7ipXC-_GMng4RiKja6X3dimdaxifqHdPMazNdbbQuvXYmHxnRKwCnFqlgwTR8evC36sFLVSeqEP6l_L2O0Q_lauf5cSqit7yKE6mOd2BVvO-pwYhLM9PprTwsSOTHjjiPmNuaWm4xHybIMwWDUqblyibueOo__0xYnQZy0RMsT1fMuAn_10C4Pgd4JI");'></div>
+        <!-- Dropdown arrow -->
         <button class="flex items-center justify-center size-10 rounded-full bg-[#D0ECE7]/50 hover:bg-[#C9F3E5] text-[#333333] transition-colors duration-200">
           <span class="material-symbols-outlined">arrow_drop_down</span>
         </button>

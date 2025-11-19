@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html class="light" lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Activity Feed - Social Renting App</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          'FILL'0,
+          'wght'400,
+          'GRAD'0,
+          'opsz'24
+      }
+    </style>
+    <script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#3DDC97",                   /* ⭐ MÀU CHỦ ĐẠO MỚI */
+          "background-light": "#f6f8f8",
+          "background-dark": "#101f22",
+          "text-light-primary": "#0d191b",
+          "text-dark-primary": "#f6f8f8",
+          "text-light-secondary": "#4c8d9a",
+          "text-dark-secondary": "#b0c5c9",
+          "border-light": "#cfe3e7",
+          "border-dark": "#2a3f43",
+          "card-light": "#ffffff",
+          "card-dark": "#1a2c2f",
+        },
+        fontFamily: {
+          "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+        },
+        borderRadius: {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+      },
+    },
+  }
+</script>
+
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="bg-background-light dark:bg-background-dark font-display text-text-light-primary dark:text-text-dark-primary">
+    <header class="sticky top-0 z-50 flex items-center justify-between w-full h-16 px-4 bg-[#E8F8F5] shadow-[0_2px_4px_rgba(208,236,231,0.5)]">
+      <!-- Left Section -->
+      <div class="flex items-center gap-2">
+        <div class="flex items-center justify-center size-10 bg-[#3DDC97] rounded-full text-white">
+          <span class="material-symbols-outlined text-2xl">cottage</span>
+        </div>
+        <div class="relative hidden sm:flex items-center">
+          <div class="absolute left-3 text-[#333333]/60">
+            <span class="material-symbols-outlined text-xl">search</span>
+          </div>
+          <input class="w-64 h-10 pl-10 pr-4 rounded-full border-none bg-[#D0ECE7]/50 focus:ring-2 focus:ring-[#3DDC97]/50 placeholder-[#333333]/60 text-[#333333]" placeholder="Search Góc Chill" type="text" />
+        </div>
+      </div>
+      <!-- Center Section -->
+      <nav class="flex-1 flex justify-center items-stretch h-full">
+        <ul class="flex items-center space-x-2">
+          <li>
+            <a class="active flex items-center justify-center h-full px-8 xl:px-12 relative group" href="index.html">
+              <span class="material-symbols-outlined text-3xl text-[#333333]/80 group-hover:text-[#3DDC97]">home</span>
+            </a>
+          </li>
+          <li>
+            <a class="active flex items-center justify-center h-full px-8 xl:px-12 relative group" href="detail.html">
+              <span class="material-symbols-outlined text-3xl text-[#333333]/80 group-hover:text-[#3DDC97]">explore</span>
+            </a>
+          </li>
+          <li>
+            <a class="active flex items-center justify-center h-full px-8 xl:px-12 relative group" href="user_page.html">
+              <span class="material-symbols-outlined text-3xl text-[#333333]/80 group-hover:text-[#3DDC97]">group</span>
+              <div class="absolute bottom-0 h-1 w-full bg-[#3DDC97] rounded-t-full"></div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Right Section -->
+      <div class="flex items-center gap-2">
+        <!-- Chat -->
+        <button class="flex items-center justify-center h-full rounded-lg hover:bg-[#C9F3E5] transition-colors duration-200 group">
+          <span class="material-symbols-outlined text-3xl text-[#333333]/80 group-hover:text-[#3DDC97]"> chat </span>
+        </button>
+        <!-- Notifications -->
+        <button class="flex items-center justify-center h-full rounded-lg hover:bg-[#C9F3E5] transition-colors duration-200 group">
+          <span class="material-symbols-outlined text-3xl text-[#333333]/80 group-hover:text-[#3DDC97]"> notifications </span>
+        </button>
+        <!-- Apps button -->
+        <button class="flex items-center justify-center size-10 rounded-full bg-[#D0ECE7]/50 hover:bg-[#C9F3E5] text-[#333333] transition-colors duration-200">
+          <span class="material-symbols-outlined">apps</span>
+        </button>
+        <!-- Avatar -->
+        <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBCkkQUrS1Nzi0NKTCQp0Lmfe8hluXZR9bAF8Qj4VRJobq1jGx9JGyFXRA0NYfbBBoeHJ4vWbAXPwN51uOK7ipXC-_GMng4RiKja6X3dimdaxifqHdPMazNdbbQuvXYmHxnRKwCnFqlgwTR8evC36sFLVSeqEP6l_L2O0Q_lauf5cSqit7yKE6mOd2BVvO-pwYhLM9PprTwsSOTHjjiPmNuaWm4xHybIMwWDUqblyibueOo__0xYnQZy0RMsT1fMuAn_10C4Pgd4JI");'></div>
+        <!-- Dropdown arrow -->
+        <button class="flex items-center justify-center size-10 rounded-full bg-[#D0ECE7]/50 hover:bg-[#C9F3E5] text-[#333333] transition-colors duration-200">
+          <span class="material-symbols-outlined">arrow_drop_down</span>
+        </button>
+      </div>
+    </header>
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden pb-24" style="padding: 2rem;">
+      <!-- Top App Bar -->
+      <main class="flex-1">
+        <!-- Composer -->
+        <div class="flex items-center px-4 py-3 gap-3 @container border-b border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark">
+          <label class="flex flex-col min-w-40 h-full flex-1">
+            <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+              <div class="flex bg-card-light dark:bg-card-dark justify-end pt-2">
+                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 shrink-0" data-alt="User avatar image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAW1RpjjV_54d_pijHoDnzI_3B8qI0iXuTiSXgM-eNbL43lijMbP16Sm_Ru8sznOQrTpuYLI6daNRXvHu1cU1j6MsPJ7C2bECrD2BPNNfir72YZ7fV7tT0m5S2DkuXwaso-RHLVtAdAkTSwDEAj_zqq1oRzbU02HKEUfjSida4zjyXdPgzUKbSyhsrA-8QvcL6O5i4RtftGm8keFgI8j8r4pOAh7NaIC-jYf40xJcBIqvMfwdBkOd9d_uc5eQbJFNT-3wqjv4KqTSk");'></div>
+              </div>
+              <div class="flex flex-1 flex-col pl-3">
+                <textarea class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light-primary dark:text-text-dark-primary focus:outline-0 focus:ring-0 border-0 bg-card-light dark:bg-card-dark focus:border-border-light dark:focus:border-border-dark h-auto placeholder:text-text-light-secondary dark:placeholder:text-text-dark-secondary rounded-l-none border-l-0 pl-2 rounded-b-none border-b-0 text-base font-normal leading-normal pt-4" placeholder="Bạn đang tìm nhà hay cho thuê?"></textarea>
+                <div class="flex bg-card-light dark:bg-card-dark justify-end">
+                  <div class="flex items-center gap-4 justify-end">
+                    <div class="flex items-center gap-1">
+                      <button class="flex items-center justify-center p-1.5 text-text-light-secondary dark:text-text-dark-secondary hover:text-primary dark:hover:text-primary transition-colors">
+                        <span class="material-symbols-outlined text-xl">image</span>
+                      </button>
+                      <button class="flex items-center justify-center p-1.5 text-text-light-secondary dark:text-text-dark-secondary hover:text-primary dark:hover:text-primary transition-colors">
+                        <span class="material-symbols-outlined text-xl">location_on</span>
+                      </button>
+                    </div>
+                    <button class="min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-primary text-white text-sm font-medium leading-normal">
+                      <span class="truncate">Đăng tin</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </label>
+        </div>
+        <!-- Chips / Filters -->
+        <div class="p-3 bg-background-light dark:bg-background-dark border-b border-border-light dark:border-border-dark">
+          <div class="flex gap-2 overflow-x-auto pb-2 -mb-2">
+            <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary/20 text-text-light-primary dark:text-text-dark-primary px-4">
+              <p class="text-sm font-medium leading-normal">Mới nhất</p>
+            </div>
+            <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary/20 bg-opacity-30 dark:bg-opacity-30 px-4">
+              <p class="text-sm font-medium leading-normal">Dành cho bạn</p>
+            </div>
+            <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary/20 bg-opacity-30 dark:bg-opacity-30 px-4">
+              <p class="text-sm font-medium leading-normal">Nhà cho thuê</p>
+            </div>
+            <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary/20 bg-opacity-30 dark:bg-opacity-30 px-4">
+              <p class="text-sm font-medium leading-normal">Người tìm nhà</p>
+            </div>
+            <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary/20 bg-opacity-30 dark:bg-opacity-30 px-4">
+              <p class="text-sm font-medium leading-normal">Thông báo</p>
+            </div>
+          </div>
+        </div>
+        <!-- Feed Cards Section -->
+        <div class="flex flex-col">
+          <!-- Card 1: For Rent -->
+          <div class="bg-card-light dark:bg-card-dark border-b border-border-light dark:border-border-dark">
+            <div class="p-4 @container">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 shrink-0" data-alt="Landlord's avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDM1qAMCnlaSBqExd-z8AqrI4yXL9bWfC-fvSJfVjTIffzvJoWfg9XT7XslUWDRyk31ZKicnJKiVK_T83vYB-TaZZt1G01_nZ8wfBQyjgh1sxRrPCFz373VfKKjUzGUdAWntqLy0m2ObSPum8sC_uI6ECGgvOuR7MJwgRKit8G_r5l--IFbACImEcivq3XsHoVzRy1KYoBVBYMTWwE7ZkXpsRZwsBwfo2p3wVv6ZNhG4K86TR0OzIH-ZEd7M24FS9alRYP_CiEId_A");'></div>
+                <div class="flex-1">
+                  <p class="font-bold text-text-light-primary dark:text-text-dark-primary">An Nguyễn</p>
+                  <p class="text-text-light-secondary dark:text-text-dark-secondary text-sm font-normal leading-normal">Chủ nhà • 5 phút trước</p>
+                </div>
+                <button class="text-text-light-secondary dark:text-text-dark-secondary">
+                  <span class="material-symbols-outlined">more_horiz</span>
+                </button>
+              </div>
+              <p class="mb-3 text-text-light-primary dark:text-text-dark-primary"> Cho thuê căn hộ 2 phòng ngủ đầy đủ nội thất, view sông thoáng mát. Có thể dọn vào ở ngay. </p>
+              <div class="flex flex-col items-stretch justify-start rounded-lg @xl:flex-row @xl:items-start overflow-hidden border border-border-light dark:border-border-dark">
+                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover @xl:w-1/3 @xl:aspect-square" data-alt="Interior of a modern 2-bedroom apartment with city view" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBRhisdr6FMYi3cobo2Ps676b1tNaROAz-wzzkXjRGY3jwit2-MDFtYfxT30_lwusHFA2rqm2IpqgPdPx3ogODLE56f_9a2t45N_TUGpA2C0Bef-Mruw7YgmXh0JuXLGjrVOACEC8LDlhol5YovP7DXF7Rvgn2E2yEAwK7qc6yjkoUadot2xDoe0X0c91yiha0nmPxOWqS8HKRkrf3sL3Qii9fiHhOf-6E2TWYcZIZRfbeF6mnnjR9_nkJi0BVp1iXhdsWLcr9e5DE");'></div>
+                <div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 p-4">
+                  <p class="text-text-light-primary dark:text-text-dark-primary text-lg font-bold leading-tight tracking-[-0.015em]">Cho thuê: Căn hộ 2PN tại The Gold View</p>
+                  <p class="text-text-light-secondary dark:text-text-dark-secondary text-base font-normal leading-normal">Giá: 15 triệu/tháng | 75m²</p>
+                  <p class="text-text-light-secondary dark:text-text-dark-secondary text-base font-normal leading-normal">Địa chỉ: Quận 4, TP.HCM</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-4 px-4 py-2 justify-between border-t border-border-light dark:border-border-dark">
+              <div class="flex items-center justify-center gap-2 px-3 py-2">
+                <span class="material-symbols-outlined text-text-light-secondary dark:text-text-dark-secondary text-2xl">favorite_border</span>
+                <p class="text-text-light-secondary dark:text-text-dark-secondary text-[13px] font-bold leading-normal tracking-[0.015em]">15</p>
+              </div>
+              <div class="flex items-center justify-center gap-2 px-3 py-2">
+                <span class="material-symbols-outlined text-text-light-secondary dark:text-text-dark-secondary text-2xl">chat_bubble_outline</span>
+                <p class="text-text-light-secondary dark:text-text-dark-secondary text-[13px] font-bold leading-normal tracking-[0.015em]">4</p>
+              </div>
+              <div class="flex items-center justify-center gap-2 px-3 py-2">
+                <span class="material-symbols-outlined text-text-light-secondary dark:text-text-dark-secondary text-2xl">bookmark_border</span>
+                <p class="text-text-light-secondary dark:text-text-dark-secondary text-[13px] font-bold leading-normal tracking-[0.015em]">Lưu tin</p>
+              </div>
+              <div class="flex items-center justify-center gap-2 px-3 py-2">
+                <span class="material-symbols-outlined text-text-light-secondary dark:text-text-dark-secondary text-2xl">share</span>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2: Seeking -->
+          <div class="bg-card-light dark:bg-card-dark border-b border-border-light dark:border-border-dark">
+            <div class="p-4 @container">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 shrink-0" data-alt="User avatar of someone seeking an apartment" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC-yFWMOUDpYBn40YG_rCn0Ekiibe_2Ya02MiCTzd21K983P0WRgVF2x04tcA4AAKIo3cQJ91DxyZQyat6CfGtOv6ObC-yVZfz8MuIMlxrPCR0PC0wbvdZp4BybG7rkTabrvjK3X9ZpgtMIzXcPg5XDva7rSygPGgPpWr8scR3sMvMADvWOCW1tRSSOSdEHIkRn37y7JCdQ7NT2DReSwkwEHISSIpdhwkVyuKJU72ybUUWjk5TsgBlfvsaeqob-cAHPYR5ZmrgDObo");'></div>
+                <div class="flex-1">
+                  <p class="font-bold text-text-light-primary dark:text-text-dark-primary">Trần Minh Anh</p>
+                  <p class="text-text-light-secondary dark:text-text-dark-secondary text-sm font-normal leading-normal">Người tìm nhà • 1 giờ trước</p>
+                </div>
+                <button class="text-text-light-secondary dark:text-text-dark-secondary">
+                  <span class="material-symbols-outlined">more_horiz</span>
+                </button>
+              </div>
+              <div class="flex flex-col items-stretch justify-start rounded-lg bg-primary/10 dark:bg-primary/20 p-4">
+                <p class="text-text-light-primary dark:text-text-dark-primary text-lg font-bold leading-tight tracking-[-0.015em]">Tìm nhà nguyên căn tại Quận Bình Thạnh</p>
+                <p class="text-text-light-secondary dark:text-text-dark-secondary text-base font-normal leading-normal mt-2"> Mình đang cần tìm nhà nguyên căn có 2-3 phòng ngủ, ưu tiên có sân thượng, khu vực an ninh, gần chợ. Ngân sách dưới 20 triệu/tháng. Anh chị chủ nhà hoặc môi giới có tin phù hợp xin liên hệ. Cảm ơn! </p>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-4 px-4 py-2 justify-between border-t border-border-light dark:border-border-dark">
+              <div class="flex items-center justify-center gap-2 px-3 py-2">
+                <span class="material-symbols-outlined text-text-light-secondary dark:text-text-dark-secondary text-2xl">favorite_border</span>
+                <p class="text-text-light-secondary dark:text-text-dark-secondary text-[13px] font-bold leading-normal tracking-[0.015em]">8</p>
+              </div>
+              <div class="flex items-center justify-center gap-2 px-3 py-2">
+                <span class="material-symbols-outlined text-text-light-secondary dark:text-text-dark-secondary text-2xl">chat_bubble_outline</span>
+                <p class="text-text-light-secondary dark:text-text-dark-secondary text-[13px] font-bold leading-normal tracking-[0.015em]">2</p>
+              </div>
+              <div class="flex items-center justify-center gap-2 px-3 py-2">
+                <span class="material-symbols-outlined text-text-light-secondary dark:text-text-dark-secondary text-2xl">share</span>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3: System Notification -->
+          <div class="bg-card-light dark:bg-card-dark border-b border-border-light dark:border-border-dark">
+            <div class="p-4 @container">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="size-10 shrink-0 rounded-full bg-primary/20 flex items-center justify-center">
+                  <span class="material-symbols-outlined text-primary text-2xl">campaign</span>
+                </div>
+                <div class="flex-1">
+                  <p class="font-bold text-text-light-primary dark:text-text-dark-primary">Thông báo hệ thống</p>
+                  <p class="text-text-light-secondary dark:text-text-dark-secondary text-sm font-normal leading-normal">2 giờ trước</p>
+                </div>
+              </div>
+              <p class="text-text-light-primary dark:text-text-dark-primary"> Chúng tôi vừa cập nhật tính năng mới giúp bạn lọc tin đăng theo tiện ích (gần trường học, siêu thị,...). Hãy trải nghiệm ngay để tìm được ngôi nhà ưng ý nhất! </p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
