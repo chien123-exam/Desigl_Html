@@ -8,12 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
       tailwind.config = {
         theme: {
@@ -159,7 +155,7 @@
                  justify-center gap-1 transition shadow-sm">
                 <span class="material-symbols-outlined text-base">search</span> Tìm kiếm </button>
               <button class="h-11 w-11 bg-white hover:bg-gray-100 rounded-lg border 
-                 border-gray-300 flex items-center justify-center text-gray-600 transition shadow-sm">
+                 border-gray-300 flex items-center justify-center text-gray-600 transition shadow-sm" onclick="window.location.href='search_detail.html'">
                 <span class="material-symbols-outlined text-base">tune</span>
               </button>
             </div>
@@ -224,331 +220,97 @@
           </div>
         </div>
         <!-- Swiper -->
-        <div class="swiper featuredSwiper">
-          <div class="swiper-wrapper">
-            <!-- CARD 1 -->
-            <div class="swiper-slide">
-              <a href="/detail.html" class="block no-underline">
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition transform">
-                  <div class="relative h-56">
-                    <img src="https://images.unsplash.com/photo-1662454419622-a41092ecd245?w=500" alt="Studio view sông" class="w-full h-full object-cover">
-                    <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold text-white bg-green-600"> Được khách yêu thích </span>
-                    <button class="absolute top-3 right-3 w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow">
-                      <span class="material-symbols-outlined text-red-500">favorite</span>
-                    </button>
-                  </div>
-                  <div class="p-5">
-                    <h3 class="font-bold text-lg mb-2 line-clamp-2">Phòng tại Thành phố Hồ Chí Minh</h3>
-                    <p class="text-gray-600 flex items-center gap-1 text-sm mb-3">
-                      <span class="material-symbols-outlined text-lg">location_on</span> Quận 1, TP.HCM
-                    </p>
-                    <div class="flex gap-4 text-sm text-gray-600 mb-4">
-                      <span class="flex items-center gap-1">
-                        <span class="material-symbols-outlined text-lg">bed</span> 1 phòng </span>
-                      <span class="flex items-center gap-1">
-                        <span class="material-symbols-outlined text-lg">bathroom</span> 1 WC </span>
-                      <span class="flex items-center gap-1">
-                        <span class="material-symbols-outlined text-lg">square_foot</span> 25m² </span>
-                    </div>
-                    <div class="flex items-center justify-between border-t pt-4 mb-4">
-                      <div class="flex items-center gap-3">
-                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=100" alt="Chủ nhà" class="w-10 h-10 rounded-full object-cover">
-                        <div>
-                          <p class="font-semibold text-sm">Chủ nhà</p>
-                          <p class="text-xs text-gray-500">đ760.000 cho 2 đêm</p>
-                        </div>
-                      </div>
-                      <div class="text-right">
-                        <p class="font-bold text-lg text-green-600">5.0</p>
-                      </div>
-                    </div>
-                    <!-- <div class="flex items-center gap-1 text-yellow-500"><span class="material-symbols-outlined text-lg">star</span><span class="font-semibold">5.0</span></div> -->
-                    <div class="flex items-center gap-1 text-yellow-500">
-                      <span class="material-symbols-outlined text-lg">star</span>
-                      <span class="font-semibold">5.0</span>
-                      <span class="text-sm text-gray-500">(34)</span>
-                    </div>
-                  </div>
-                </div>
-              </a>
+        <!-- GRID TOP YÊU THÍCH -->
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+          <!-- CARD 1 -->
+          <div class="group relative flex flex-col overflow-hidden rounded-2xl bg-white border border-gray-200 shadow transition hover:shadow-lg">
+            <a href="./detail.html">
+              <div class="relative h-56">
+              <img src="https://images.unsplash.com/photo-1706808849780-7a04fbac83ef?w=500" class="absolute inset-0 w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold text-white bg-green-600">Được khách yêu thích</span>
+              <button class="absolute top-3 right-3 w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow">
+                <span class="material-symbols-outlined text-red-500">favorite</span>
+              </button>
             </div>
-            <!-- CARD 2 -->
-            <div class="swiper-slide">
-              <a href="/detail.html" class="block no-underline">
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition transform">
-                  <div class="relative h-56">
-                    <img src="https://images.unsplash.com/photo-1618773540045-8b2c5f31e5e5?w=500" alt="Căn hộ" class="w-full h-full object-cover">
-                    <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold text-white bg-green-600"> Được khách yêu thích </span>
-                    <button class="absolute top-3 right-3 w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow">
-                      <span class="material-symbols-outlined text-red-500">favorite</span>
-                    </button>
-                  </div>
-                  <div class="p-5">
-                    <h3 class="font-bold text-lg mb-2 line-clamp-2">Căn hộ tại Thành phố Hồ Chí Minh</h3>
-                    <p class="text-gray-600 flex items-center gap-1 text-sm mb-3">
-                      <span class="material-symbols-outlined text-lg">location_on</span> Quận 7, TP.HCM
-                    </p>
-                    <div class="flex gap-4 text-sm text-gray-600 mb-4">
-                      <span class="flex items-center gap-1">
-                        <span class="material-symbols-outlined text-lg">bed</span> 1 phòng </span>
-                      <span class="flex items-center gap-1">
-                        <span class="material-symbols-outlined text-lg">bathroom</span> 1 WC </span>
-                      <span class="flex items-center gap-1">
-                        <span class="material-symbols-outlined text-lg">square_foot</span> 30m² </span>
-                    </div>
-                    <div class="flex items-center justify-between border-t pt-4 mb-4">
-                      <div class="flex items-center gap-3">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" alt="Chủ nhà" class="w-10 h-10 rounded-full object-cover">
-                        <div>
-                          <p class="font-semibold text-sm">Chủ nhà</p>
-                          <p class="text-xs text-gray-500">đ907.236 cho 2 đêm</p>
-                        </div>
-                      </div>
-                      <div class="text-right">
-                        <p class="font-bold text-lg text-green-600">4.98</p>
-                      </div>
-                    </div>
-                    <!-- <div class="flex items-center gap-1 text-yellow-500"><span class="material-symbols-outlined text-lg">star</span><span class="font-semibold">4.98</span></div> -->
-                    <div class="flex items-center gap-1 text-yellow-500">
-                      <span class="material-symbols-outlined text-lg">star</span>
-                      <span class="font-semibold">4.98</span>
-                      <span class="text-sm text-gray-500">(12)</span>
-                    </div>
+            </a>
+            
+            <a href="./detail.html">
+              <div class="p-5">
+              <h3 class="font-bold text-lg mb-2 line-clamp-2">Studio view sông Sài Gòn</h3>
+              <p class="text-gray-600 flex items-center gap-1 text-sm mb-3">
+                <span class="material-symbols-outlined text-lg">location_on</span> Quận 1, TP.HCM
+              </p>
+              <div class="flex gap-4 text-sm text-gray-600 mb-4">
+                <span class="flex items-center gap-1">
+                  <span class="material-symbols-outlined text-lg">bed</span> Studio </span>
+                <span class="flex items-center gap-1">
+                  <span class="material-symbols-outlined text-lg">bathroom</span> 1 WC </span>
+                <span class="flex items-center gap-1">
+                  <span class="material-symbols-outlined text-lg">square_foot</span> 45m² </span>
+              </div>
+              <div class="flex items-center justify-between border-t pt-4 mb-4">
+                <div class="flex items-center gap-3">
+                  <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=100" class="w-10 h-10 rounded-full object-cover" />
+                  <div>
+                    <p class="font-semibold text-sm">Chủ nhà</p>
+                    <p class="text-xs text-gray-500">đ760.000 cho 2 đêm</p>
                   </div>
                 </div>
-              </a>
+                <div class="text-right">
+                  <p class="font-bold text-lg text-green-600">5.0</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-1 text-yellow-500">
+                <span class="material-symbols-outlined text-lg">star</span>
+                <span class="font-semibold">5.0</span>
+                <span class="text-sm text-gray-500">(245)</span>
+              </div>
             </div>
-            <!-- CARD 3 -->
-            <div class="swiper-slide">
-              <a href="/detail.html" class="block no-underline">
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition transform">
-                  <div class="relative h-56">
-                    <img src="https://images.unsplash.com/photo-1616594039962-90e2d1b7e7b1?w=500" alt="Phòng chung" class="w-full h-full object-cover">
-                    <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold text-white bg-green-600"> Được khách yêu thích </span>
-                    <button class="absolute top-3 right-3 w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow">
-                      <span class="material-symbols-outlined text-red-500">favorite</span>
-                    </button>
-                  </div>
-                  <div class="p-5">
-                    <h3 class="font-bold text-lg mb-2 line-clamp-2">Căn hộ tại Thành phố Hồ Chí Minh</h3>
-                    <p class="text-gray-600 flex items-center gap-1 text-sm mb-3">
-                      <span class="material-symbols-outlined text-lg">location_on</span> Bình Thạnh, TP.HCM
-                    </p>
-                    <div class="flex gap-4 text-sm text-gray-600 mb-4">
-                      <span class="flex items-center gap-1">
-                        <span class="material-symbols-outlined text-lg">bed</span> 2 phòng </span>
-                      <span class="flex items-center gap-1">
-                        <span class="material-symbols-outlined text-lg">bathroom</span> 1 WC </span>
-                      <span class="flex items-center gap-1">
-                        <span class="material-symbols-outlined text-lg">square_foot</span> 50m² </span>
-                    </div>
-                    <div class="flex items-center justify-between border-t pt-4 mb-4">
-                      <div class="flex items-center gap-3">
-                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100" alt="Chủ nhà" class="w-10 h-10 rounded-full object-cover">
-                        <div>
-                          <p class="font-semibold text-sm">Chủ nhà</p>
-                          <p class="text-xs text-gray-500">đ1.597.648 cho 2 đêm</p>
-                        </div>
-                      </div>
-                      <div class="text-right">
-                        <p class="font-bold text-lg text-green-600">4.87</p>
-                      </div>
-                    </div>
-                    <!-- <div class="flex items-center gap-1 text-yellow-500"><span class="material-symbols-outlined text-lg">star</span><span class="font-semibold">4.87</span></div> -->
-                    <div class="flex items-center gap-1 text-yellow-500">
-                      <span class="material-symbols-outlined text-lg">star</span>
-                      <span class="font-semibold">4.87</span>
-                      <span class="text-sm text-gray-500">(2)</span>
-                    </div>
-                  </div>
-                </div>
-              </a>
+            </a>
+            
+          </div>
+          <!-- CARD 2 -->
+          <div class="group relative flex flex-col overflow-hidden rounded-2xl bg-white border border-gray-200 shadow transition hover:shadow-lg">
+            <div class="relative h-56">
+              <img src="https://images.unsplash.com/photo-1618773540045-8b2c5f31e5e5?w=500" class="absolute inset-0 w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold text-white bg-green-600">Được khách yêu thích</span>
+              <button class="absolute top-3 right-3 w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow">
+                <span class="material-symbols-outlined text-red-500">favorite</span>
+              </button>
             </div>
-            <!-- CARD 4 -->
-            <div class="swiper-slide">
-              <a href="/detail.html" class="block no-underline">
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition transform">
-                  <div class="relative h-56">
-                    <img src="https://images.unsplash.com/photo-1618220164204-2b1a9b0a6a1f?w=500" alt="Phòng chung" class="w-full h-full object-cover">
-                    <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold text-white bg-green-600"> Được khách yêu thích </span>
-                    <button class="absolute top-3 right-3 w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow">
-                      <span class="material-symbols-outlined text-red-500">favorite</span>
-                    </button>
-                  </div>
-                  <div class="p-5">
-                    <h3 class="font-bold text-lg mb-2 line-clamp-2">Căn hộ tại Thành phố Hồ Chí Minh</h3>
-                    <p class="text-gray-600 flex items-center gap-1 text-sm mb-3">
-                      <span class="material-symbols-outlined text-lg">location_on</span> Quận 3, TP.HCM
-                    </p>
-                    <div class="flex gap-4 text-sm text-gray-600 mb-4">
-                      <span class="flex items-center gap-1">
-                        <span class="material-symbols-outlined text-lg">bed</span> Chung </span>
-                      <span class="flex items-center gap-1">
-                        <span class="material-symbols-outlined text-lg">bathroom</span> 1 WC </span>
-                      <span class="flex items-center gap-1">
-                        <span class="material-symbols-outlined text-lg">square_foot</span> 15m² </span>
-                    </div>
-                    <div class="flex items-center justify-between border-t pt-4 mb-4">
-                      <div class="flex items-center gap-3">
-                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100" alt="Chủ nhà" class="w-10 h-10 rounded-full object-cover">
-                        <div>
-                          <p class="font-semibold text-sm">Chủ nhà</p>
-                          <p class="text-xs text-gray-500">đ302.859 cho 2 đêm</p>
-                        </div>
-                      </div>
-                      <div class="text-right">
-                        <p class="font-bold text-lg text-green-600">4.83</p>
-                      </div>
-                    </div>
-                    <!-- <div class="flex items-center gap-1 text-yellow-500"><span class="material-symbols-outlined text-lg">star</span><span class="font-semibold">4.83</span></div> -->
-                    <div class="flex items-center gap-1 text-yellow-500">
-                      <span class="material-symbols-outlined text-lg">star</span>
-                      <span class="font-semibold">4.83</span>
-                      <span class="text-sm text-gray-500">(52)</span>
-                    </div>
+            <div class="p-5">
+              <h3 class="font-bold text-lg mb-2 line-clamp-2">Phòng chung gần trung tâm</h3>
+              <p class="text-gray-600 flex items-center gap-1 text-sm mb-3">
+                <span class="material-symbols-outlined text-lg">location_on</span> Quận 3, TP.HCM
+              </p>
+              <div class="flex gap-4 text-sm text-gray-600 mb-4">
+                <span class="flex items-center gap-1">
+                  <span class="material-symbols-outlined text-lg">bed</span> Chung </span>
+                <span class="flex items-center gap-1">
+                  <span class="material-symbols-outlined text-lg">bathroom</span> 1 WC </span>
+                <span class="flex items-center gap-1">
+                  <span class="material-symbols-outlined text-lg">square_foot</span> 20m² </span>
+              </div>
+              <div class="flex items-center justify-between border-t pt-4 mb-4">
+                <div class="flex items-center gap-3">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" class="w-10 h-10 rounded-full object-cover" />
+                  <div>
+                    <p class="font-semibold text-sm">Chủ nhà</p>
+                    <p class="text-xs text-gray-500">đ860.000 cho 2 đêm</p>
                   </div>
                 </div>
-              </a>
-            </div>
-            <!-- CARD 5 -->
-            <div class="swiper-slide">
-              <a href="/detail.html" class="block no-underline">
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition transform">
-                  <div class="relative h-56">
-                    <img src="https://images.unsplash.com/photo-1616594039962-90e2d1b7e7b1?w=500" alt="Phòng riêng" class="w-full h-full object-cover">
-                    <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold text-white bg-green-600"> Được khách yêu thích </span>
-                    <button class="absolute top-3 right-3 w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow">
-                      <span class="material-symbols-outlined text-red-500">favorite</span>
-                    </button>
-                  </div>
-                  <div class="p-5">
-                    <h3 class="font-bold text-lg mb-2 line-clamp-2">Phòng tại Thành phố Hồ Chí Minh</h3>
-                    <p class="text-gray-600 flex items-center gap-1 text-sm mb-3">
-                      <span class="material-symbols-outlined text-lg">location_on</span> Gò Vấp, TP.HCM
-                    </p>
-                    <div class="flex gap-4 text-sm text-gray-600 mb-4">
-                      <span class="flex items-center gap-1">
-                        <span class="material-symbols-outlined text-lg">bed</span> 1 phòng </span>
-                      <span class="flex items-center gap-1">
-                        <span class="material-symbols-outlined text-lg">bathroom</span> 1 WC </span>
-                      <span class="flex items-center gap-1">
-                        <span class="material-symbols-outlined text-lg">square_foot</span> 20m² </span>
-                    </div>
-                    <div class="flex items-center justify-between border-t pt-4 mb-4">
-                      <div class="flex items-center gap-3">
-                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100" alt="Chủ nhà" class="w-10 h-10 rounded-full object-cover">
-                        <div>
-                          <p class="font-semibold text-sm">Chủ nhà</p>
-                          <p class="text-xs text-gray-500">đ1.309.998 cho 2 đêm</p>
-                        </div>
-                      </div>
-                      <div class="text-right">
-                        <p class="font-bold text-lg text-green-600">5.0</p>
-                      </div>
-                    </div>
-                    <!-- <div class="flex items-center gap-1 text-yellow-500"><span class="material-symbols-outlined text-lg">star</span><span class="font-semibold">5.0</span></div> -->
-                    <div class="flex items-center gap-1 text-yellow-500">
-                      <span class="material-symbols-outlined text-lg">star</span>
-                      <span class="font-semibold">5.0</span>
-                      <span class="text-sm text-gray-500">(111)</span>
-                    </div>
-                  </div>
+                <div class="text-right">
+                  <p class="font-bold text-lg text-green-600">5.0</p>
                 </div>
-              </a>
-            </div>
-            <!-- CARD 6 -->
-            <div class="swiper-slide">
-              <a href="/detail.html" class="block no-underline">
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition transform">
-                  <div class="relative h-56">
-                    <img src="https://images.unsplash.com/photo-1618773540045-8b2c5f31e5e5?w=500" alt="Căn hộ" class="w-full h-full object-cover">
-                    <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold text-white bg-green-600"> Được khách yêu thích </span>
-                    <button class="absolute top-3 right-3 w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow">
-                      <span class="material-symbols-outlined text-red-500">favorite</span>
-                    </button>
-                  </div>
-                  <div class="p-5">
-                    <h3 class="font-bold text-lg mb-2 line-clamp-2">Căn hộ tại Thành phố Hồ Chí Minh</h3>
-                    <p class="text-gray-600 flex items-center gap-1 text-sm mb-3">
-                      <span class="material-symbols-outlined text-lg">location_on</span> Tân Bình, TP.HCM
-                    </p>
-                    <div class="flex gap-4 text-sm text-gray-600 mb-4">
-                      <span class="flex items-center gap-1">
-                        <span class="material-symbols-outlined text-lg">bed</span> Studio </span>
-                      <span class="flex items-center gap-1">
-                        <span class="material-symbols-outlined text-lg">bathroom</span> 1 WC </span>
-                      <span class="flex items-center gap-1">
-                        <span class="material-symbols-outlined text-lg">square_foot</span> 35m² </span>
-                    </div>
-                    <div class="flex items-center justify-between border-t pt-4 mb-4">
-                      <div class="flex items-center gap-3">
-                        <img src="https://images.unsplash.com/photo-1580489940927-79b8b3c7e2c8?w=100" alt="Chủ nhà" class="w-10 h-10 rounded-full object-cover">
-                        <div>
-                          <p class="font-semibold text-sm">Chủ nhà</p>
-                          <p class="text-xs text-gray-500">đ1.584.042 cho 2 đêm</p>
-                        </div>
-                      </div>
-                      <div class="text-right">
-                        <p class="font-bold text-lg text-green-600">4.86</p>
-                      </div>
-                    </div>
-                    <!-- <div class="flex items-center gap-1 text-yellow-500"><span class="material-symbols-outlined text-lg">star</span><span class="font-semibold">4.86</span></div> -->
-                    <div class="flex items-center gap-1 text-yellow-500">
-                      <span class="material-symbols-outlined text-lg">star</span>
-                      <span class="font-semibold">4.86</span>
-                      <span class="text-sm text-gray-500">(86)</span>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <!-- CARD 7 -->
-            <div class="swiper-slide">
-              <a href="/detail.html" class="block no-underline">
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition transform">
-                  <div class="relative h-56">
-                    <img src="https://images.unsplash.com/photo-1662454419622-a41092ecd245?w=500" alt="Phòng" class="w-full h-full object-cover">
-                    <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold text-white bg-green-600"> Được khách yêu thích </span>
-                    <button class="absolute top-3 right-3 w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow">
-                      <span class="material-symbols-outlined text-red-500">favorite</span>
-                    </button>
-                  </div>
-                  <div class="p-5">
-                    <h3 class="font-bold text-lg mb-2 line-clamp-2">Phòng tại Thành phố Hồ Chí Minh</h3>
-                    <p class="text-gray-600 flex items-center gap-1 text-sm mb-3">
-                      <span class="material-symbols-outlined text-lg">location_on</span> Phú Nhuận, TP.HCM
-                    </p>
-                    <div class="flex gap-4 text-sm text-gray-600 mb-4">
-                      <span class="flex items-center gap-1">
-                        <span class="material-symbols-outlined text-lg">bed</span> 1 phòng </span>
-                      <span class="flex items-center gap-1">
-                        <span class="material-symbols-outlined text-lg">bathroom</span> 1 WC </span>
-                      <span class="flex items-center gap-1">
-                        <span class="material-symbols-outlined text-lg">square_foot</span> 22m² </span>
-                    </div>
-                    <div class="flex items-center justify-between border-t pt-4 mb-4">
-                      <div class="flex items-center gap-3">
-                        <img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?w=100" alt="Chủ nhà" class="w-10 h-10 rounded-full object-cover">
-                        <div>
-                          <p class="font-semibold text-sm">Chủ nhà</p>
-                          <p class="text-xs text-gray-500">đ935.765 cho 2 đêm</p>
-                        </div>
-                      </div>
-                      <div class="text-right">
-                        <p class="font-bold text-lg text-green-600">5.0</p>
-                      </div>
-                    </div>
-                    <!-- <div class="flex items-center gap-1 text-yellow-500"><span class="material-symbols-outlined text-lg">star</span><span class="font-semibold">5.0</span></div> -->
-                    <div class="flex items-center gap-1 text-yellow-500">
-                      <span class="material-symbols-outlined text-lg">star</span>
-                      <span class="font-semibold">5.0</span>
-                      <span class="text-sm text-gray-500">(59)</span>
-                    </div>
-                  </div>
-                </div>
-              </a>
+              </div>
+              <div class="flex items-center gap-1 text-yellow-500">
+                <span class="material-symbols-outlined text-lg">star</span>
+                <span class="font-semibold">4.9</span>
+                <span class="text-sm text-gray-500">(189)</span>
+              </div>
             </div>
           </div>
+          <!-- Tự copy thêm 5 card nữa y như vậy nếu cần -->
         </div>
       </section>
       <!-- ============================== -->
@@ -575,104 +337,97 @@
           </div>
         </div>
         <!-- Swiper -->
-        <div class="swiper topFavoriteSwiper">
-          <div class="swiper-wrapper">
-            <!-- CARD 1 -->
-            <div class="swiper-slide">
-              <a href="/detail.html" class="block no-underline">
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition transform">
-                  <div class="relative h-56">
-                    <img src="https://images.unsplash.com/photo-1706808849780-7a04fbac83ef?w=500" alt="Top 1" class="w-full h-full object-cover">
-                    <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold text-white bg-purple-600">#1 Yêu thích nhất</span>
-                    <button class="absolute top-3 right-3 w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow">
-                      <span class="material-symbols-outlined text-red-500">favorite</span>
-                    </button>
-                  </div>
-                  <div class="p-5">
-                    <h3 class="font-bold text-lg mb-2 line-clamp-2">Studio view sông Sài Gòn</h3>
-                    <p class="text-gray-600 flex items-center gap-1 text-sm mb-3">
-                      <span class="material-symbols-outlined text-lg">location_on</span> Quận 1, TP.HCM
-                    </p>
-                    <div class="flex gap-4 text-sm text-gray-600 mb-4">
-                      <span class="flex items-center gap-1">
-                        <span class="material-symbols-outlined text-lg">bed</span> Studio </span>
-                      <span class="flex items-center gap-1">
-                        <span class="material-symbols-outlined text-lg">bathroom</span> 1 WC </span>
-                      <span class="flex items-center gap-1">
-                        <span class="material-symbols-outlined text-lg">square_foot</span> 45m² </span>
-                    </div>
-                    <div class="flex items-center justify-between border-t pt-4 mb-4">
-                      <div class="flex items-center gap-3">
-                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=100" alt="Chủ nhà" class="w-10 h-10 rounded-full object-cover">
-                        <div>
-                          <p class="font-semibold text-sm">Chủ nhà</p>
-                          <p class="text-xs text-gray-500">đ760.000 cho 2 đêm</p>
-                        </div>
-                      </div>
-                      <div class="text-right">
-                        <p class="font-bold text-lg text-green-600">5.0</p>
-                        <!-- <p class="font-bold text-lg text-green-600">8.500.000đ</p><p class="text-xs text-gray-500">/tháng</p> -->
-                      </div>
-                    </div>
-                    <div class="flex items-center gap-1 text-yellow-500">
-                      <span class="material-symbols-outlined text-lg">star</span>
-                      <span class="font-semibold">5.0</span>
-                      <span class="text-sm text-gray-500">(245)</span>
-                    </div>
+        <!-- GRID TOP YÊU THÍCH -->
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+          <!-- CARD 1 -->
+          <div class="group relative flex flex-col overflow-hidden rounded-2xl bg-white border border-gray-200 shadow transition hover:shadow-lg">
+            <a href="/detail.html" class="block no-underline">
+              <div class="relative h-56">
+              <img src="https://images.unsplash.com/photo-1706808849780-7a04fbac83ef?w=500" class="absolute inset-0 w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold text-white bg-purple-600">#1 Yêu thích nhất</span>
+              <button class="absolute top-3 right-3 w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow">
+                <span class="material-symbols-outlined text-red-500">favorite</span>
+              </button>
+            </div>
+            </a>
+            
+            <a href="./detail.html">
+              <div class="p-5">
+              <h3 class="font-bold text-lg mb-2 line-clamp-2">Studio view sông Sài Gòn</h3>
+              <p class="text-gray-600 flex items-center gap-1 text-sm mb-3">
+                <span class="material-symbols-outlined text-lg">location_on</span> Quận 1, TP.HCM
+              </p>
+              <div class="flex gap-4 text-sm text-gray-600 mb-4">
+                <span class="flex items-center gap-1">
+                  <span class="material-symbols-outlined text-lg">bed</span> Studio </span>
+                <span class="flex items-center gap-1">
+                  <span class="material-symbols-outlined text-lg">bathroom</span> 1 WC </span>
+                <span class="flex items-center gap-1">
+                  <span class="material-symbols-outlined text-lg">square_foot</span> 45m² </span>
+              </div>
+              <div class="flex items-center justify-between border-t pt-4 mb-4">
+                <div class="flex items-center gap-3">
+                  <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=100" class="w-10 h-10 rounded-full object-cover" />
+                  <div>
+                    <p class="font-semibold text-sm">Chủ nhà</p>
+                    <p class="text-xs text-gray-500">đ760.000 cho 2 đêm</p>
                   </div>
                 </div>
-              </a>
-            </div>
-            <!-- CARD 2 - 7 (TƯƠNG TỰ, ĐỔI #2, #3... HOẶC ẢNH) -->
-            <!-- Copy thêm 6 card, chỉ đổi badge và ảnh -->
-            <!-- Ví dụ CARD 2 -->
-            <div class="swiper-slide">
-              <a href="/detail.html" class="block no-underline">
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition transform">
-                  <div class="relative h-56">
-                    <img src="https://images.unsplash.com/photo-1618773540045-8b2c5f31e5e5?w=500" alt="Top 2" class="w-full h-full object-cover">
-                    <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold text-white bg-purple-600">#2 Yêu thích</span>
-                    <button class="absolute top-3 right-3 w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow">
-                      <span class="material-symbols-outlined text-red-500">favorite</span>
-                    </button>
-                  </div>
-                  <div class="p-5">
-                    <h3 class="font-bold text-lg mb-2 line-clamp-2">Phòng chung gần trung tâm</h3>
-                    <p class="text-gray-600 flex items-center gap-1 text-sm mb-3">
-                      <span class="material-symbols-outlined text-lg">location_on</span> Quận 3, TP.HCM
-                    </p>
-                    <div class="flex gap-4 text-sm text-gray-600 mb-4">
-                      <span class="flex items-center gap-1">
-                        <span class="material-symbols-outlined text-lg">bed</span> Chung </span>
-                      <span class="flex items-center gap-1">
-                        <span class="material-symbols-outlined text-lg">bathroom</span> 1 WC </span>
-                      <span class="flex items-center gap-1">
-                        <span class="material-symbols-outlined text-lg">square_foot</span> 20m² </span>
-                    </div>
-                    <div class="flex items-center justify-between border-t pt-4 mb-4">
-                      <div class="flex items-center gap-3">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" alt="Chủ nhà" class="w-10 h-10 rounded-full object-cover">
-                        <div>
-                          <p class="font-semibold text-sm">Chủ nhà</p>
-                          <p class="text-xs text-gray-500">đ860.000 cho 2 đêm</p>
-                        </div>
-                      </div>
-                      <div class="text-right">
-                        <p class="font-bold text-lg text-green-600">5.0</p>
-                        <!-- <p class="font-bold text-lg text-green-600">3.200.000đ</p><p class="text-xs text-gray-500">/tháng</p> -->
-                      </div>
-                    </div>
-                    <div class="flex items-center gap-1 text-yellow-500">
-                      <span class="material-symbols-outlined text-lg">star</span>
-                      <span class="font-semibold">4.9</span>
-                      <span class="text-sm text-gray-500">(189)</span>
-                    </div>
-                  </div>
+                <div class="text-right">
+                  <p class="font-bold text-lg text-green-600">5.0</p>
                 </div>
-              </a>
+              </div>
+              <div class="flex items-center gap-1 text-yellow-500">
+                <span class="material-symbols-outlined text-lg">star</span>
+                <span class="font-semibold">5.0</span>
+                <span class="text-sm text-gray-500">(245)</span>
+              </div>
             </div>
-            <!-- Thêm 5 card nữa tương tự... -->
+            </a>
+            
           </div>
+          <!-- CARD 2 -->
+          <div class="group relative flex flex-col overflow-hidden rounded-2xl bg-white border border-gray-200 shadow transition hover:shadow-lg">
+            <div class="relative h-56">
+              <img src="https://images.unsplash.com/photo-1618773540045-8b2c5f31e5e5?w=500" class="absolute inset-0 w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold text-white bg-purple-600">#2 Yêu thích</span>
+              <button class="absolute top-3 right-3 w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow">
+                <span class="material-symbols-outlined text-red-500">favorite</span>
+              </button>
+            </div>
+            <div class="p-5">
+              <h3 class="font-bold text-lg mb-2 line-clamp-2">Phòng chung gần trung tâm</h3>
+              <p class="text-gray-600 flex items-center gap-1 text-sm mb-3">
+                <span class="material-symbols-outlined text-lg">location_on</span> Quận 3, TP.HCM
+              </p>
+              <div class="flex gap-4 text-sm text-gray-600 mb-4">
+                <span class="flex items-center gap-1">
+                  <span class="material-symbols-outlined text-lg">bed</span> Chung </span>
+                <span class="flex items-center gap-1">
+                  <span class="material-symbols-outlined text-lg">bathroom</span> 1 WC </span>
+                <span class="flex items-center gap-1">
+                  <span class="material-symbols-outlined text-lg">square_foot</span> 20m² </span>
+              </div>
+              <div class="flex items-center justify-between border-t pt-4 mb-4">
+                <div class="flex items-center gap-3">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" class="w-10 h-10 rounded-full object-cover" />
+                  <div>
+                    <p class="font-semibold text-sm">Chủ nhà</p>
+                    <p class="text-xs text-gray-500">đ860.000 cho 2 đêm</p>
+                  </div>
+                </div>
+                <div class="text-right">
+                  <p class="font-bold text-lg text-green-600">5.0</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-1 text-yellow-500">
+                <span class="material-symbols-outlined text-lg">star</span>
+                <span class="font-semibold">4.9</span>
+                <span class="text-sm text-gray-500">(189)</span>
+              </div>
+            </div>
+          </div>
+          <!-- Tự copy thêm 5 card nữa y như vậy nếu cần -->
         </div>
       </section>
       <!-- ============================== -->
@@ -699,56 +454,96 @@
           </div>
         </div>
         <!-- Swiper -->
-        <div class="swiper newListingsSwiper">
-          <div class="swiper-wrapper">
-            <!-- CARD 1 -->
-            <div class="swiper-slide">
-              <a href="/detail.html" class="block no-underline">
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition transform">
-                  <div class="relative h-56">
-                    <img src="https://images.unsplash.com/photo-1662454419622-a41092ecd245?w=500" alt="Mới" class="w-full h-full object-cover">
-                    <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold text-white bg-orange-600">30 phút trước</span>
-                    <button class="absolute top-3 right-3 w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow">
-                      <span class="material-symbols-outlined text-red-500">favorite</span>
-                    </button>
-                  </div>
-                  <div class="p-5">
-                    <h3 class="font-bold text-lg mb-2 line-clamp-2">Phòng mới view công viên</h3>
-                    <p class="text-gray-600 flex items-center gap-1 text-sm mb-3">
-                      <span class="material-symbols-outlined text-lg">location_on</span> Quận 7, TP.HCM
-                    </p>
-                    <div class="flex gap-4 text-sm text-gray-600 mb-4">
-                      <span class="flex items-center gap-1">
-                        <span class="material-symbols-outlined text-lg">bed</span> 1 phòng </span>
-                      <span class="flex items-center gap-1">
-                        <span class="material-symbols-outlined text-lg">bathroom</span> 1 WC </span>
-                      <span class="flex items-center gap-1">
-                        <span class="material-symbols-outlined text-lg">square_foot</span> 28m² </span>
-                    </div>
-                    <div class="flex items-center justify-between border-t pt-4 mb-4">
-                      <div class="flex items-center gap-3">
-                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100" alt="Chủ nhà" class="w-10 h-10 rounded-full object-cover">
-                        <div>
-                          <p class="font-semibold text-sm">Chủ nhà</p>
-                          <p class="text-xs text-gray-500">đ1.000.000 cho 2 đêm</p>
-                        </div>
-                      </div>
-                      <div class="text-right">
-                        <p class="font-bold text-lg text-green-600">5.0</p>
-                        <!-- <p class="font-bold text-lg text-green-600">5.800.000đ</p><p class="text-xs text-gray-500">/tháng</p> -->
-                      </div>
-                    </div>
-                    <div class="flex items-center gap-1 text-yellow-500">
-                      <span class="material-symbols-outlined text-lg">star</span>
-                      <span class="font-semibold">4.8</span>
-                      <span class="text-sm text-gray-500">(12)</span>
-                    </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+          <!-- CARD 1 -->
+          <div class="group relative flex flex-col overflow-hidden rounded-2xl bg-white border border-gray-200 shadow transition hover:shadow-lg">
+            <a href="./detail.html">
+              <div class="relative h-56">
+              <img src="https://images.unsplash.com/photo-1706808849780-7a04fbac83ef?w=500" class="absolute inset-0 w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold text-white bg-orange-600">30 phút trước</span>
+              <button class="absolute top-3 right-3 w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow">
+                <span class="material-symbols-outlined text-red-500">favorite</span>
+              </button>
+            </div>
+            </a>
+            
+            <a href="./detail.html">
+              <div class="p-5">
+              <h3 class="font-bold text-lg mb-2 line-clamp-2">Studio view sông Sài Gòn</h3>
+              <p class="text-gray-600 flex items-center gap-1 text-sm mb-3">
+                <span class="material-symbols-outlined text-lg">location_on</span> Quận 1, TP.HCM
+              </p>
+              <div class="flex gap-4 text-sm text-gray-600 mb-4">
+                <span class="flex items-center gap-1">
+                  <span class="material-symbols-outlined text-lg">bed</span> Studio </span>
+                <span class="flex items-center gap-1">
+                  <span class="material-symbols-outlined text-lg">bathroom</span> 1 WC </span>
+                <span class="flex items-center gap-1">
+                  <span class="material-symbols-outlined text-lg">square_foot</span> 45m² </span>
+              </div>
+              <div class="flex items-center justify-between border-t pt-4 mb-4">
+                <div class="flex items-center gap-3">
+                  <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=100" class="w-10 h-10 rounded-full object-cover" />
+                  <div>
+                    <p class="font-semibold text-sm">Chủ nhà</p>
+                    <p class="text-xs text-gray-500">đ760.000 cho 2 đêm</p>
                   </div>
                 </div>
-              </a>
+                <div class="text-right">
+                  <p class="font-bold text-lg text-green-600">5.0</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-1 text-yellow-500">
+                <span class="material-symbols-outlined text-lg">star</span>
+                <span class="font-semibold">5.0</span>
+                <span class="text-sm text-gray-500">(245)</span>
+              </div>
             </div>
-            <!-- Thêm 6 card nữa tương tự... -->
+            </a>
+            
           </div>
+          <!-- CARD 2 -->
+          <div class="group relative flex flex-col overflow-hidden rounded-2xl bg-white border border-gray-200 shadow transition hover:shadow-lg">
+            <div class="relative h-56">
+              <img src="https://images.unsplash.com/photo-1618773540045-8b2c5f31e5e5?w=500" class="absolute inset-0 w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold text-white bg-orange-600">30 phút trước</span>
+              <button class="absolute top-3 right-3 w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow">
+                <span class="material-symbols-outlined text-red-500">favorite</span>
+              </button>
+            </div>
+            <div class="p-5">
+              <h3 class="font-bold text-lg mb-2 line-clamp-2">Phòng chung gần trung tâm</h3>
+              <p class="text-gray-600 flex items-center gap-1 text-sm mb-3">
+                <span class="material-symbols-outlined text-lg">location_on</span> Quận 3, TP.HCM
+              </p>
+              <div class="flex gap-4 text-sm text-gray-600 mb-4">
+                <span class="flex items-center gap-1">
+                  <span class="material-symbols-outlined text-lg">bed</span> Chung </span>
+                <span class="flex items-center gap-1">
+                  <span class="material-symbols-outlined text-lg">bathroom</span> 1 WC </span>
+                <span class="flex items-center gap-1">
+                  <span class="material-symbols-outlined text-lg">square_foot</span> 20m² </span>
+              </div>
+              <div class="flex items-center justify-between border-t pt-4 mb-4">
+                <div class="flex items-center gap-3">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" class="w-10 h-10 rounded-full object-cover" />
+                  <div>
+                    <p class="font-semibold text-sm">Chủ nhà</p>
+                    <p class="text-xs text-gray-500">đ860.000 cho 2 đêm</p>
+                  </div>
+                </div>
+                <div class="text-right">
+                  <p class="font-bold text-lg text-green-600">5.0</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-1 text-yellow-500">
+                <span class="material-symbols-outlined text-lg">star</span>
+                <span class="font-semibold">4.9</span>
+                <span class="text-sm text-gray-500">(189)</span>
+              </div>
+            </div>
+          </div>
+          <!-- Tự copy thêm 5 card nữa y như vậy nếu cần -->
         </div>
       </section>
       <!-- Top chủ nhà & Top môi giới -->
@@ -799,162 +594,75 @@
           <a href="/auth/register?role=owner" class="inline-flex items-center gap-3 bg-red-500 hover:bg-red-600 px-8 py-4 rounded-full font-bold text-lg shadow-lg transition"> Bắt đầu cho thuê </a>
         </div>
       </section>
-      
-       <footer class="w-full border-t bg-white">
-    <div class="mx-auto px-8 py-10">
-
-        <!-- 3 columns -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-10">
-
+      <footer class="w-full border-t bg-white">
+        <div class="mx-auto px-8 py-10">
+          <!-- 3 columns -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-10">
             <!-- Hỗ trợ -->
             <section class="text-left">
-                <h3 class="font-semibold text-gray-900 mb-4">Hỗ trợ</h3>
-                <ul class="space-y-3 text-sm text-gray-600 cursor-pointer">
-                    <li>Trung tâm trợ giúp</li>
-                    <li>Yêu cầu trợ giúp về vấn đề an toàn</li>
-                    <li>AirCover</li>
-                    <li>Chống phân biệt đối xử</li>
-                    <li>Hỗ trợ người khuyết tật</li>
-                    <li>Các tùy chọn hủy</li>
-                    <li>Báo cáo lo ngại của khu dân cư</li>
-                </ul>
+              <h3 class="font-semibold text-gray-900 mb-4">Hỗ trợ</h3>
+              <ul class="space-y-3 text-sm text-gray-600 cursor-pointer">
+                <li>Trung tâm trợ giúp</li>
+                <li>Yêu cầu trợ giúp về vấn đề an toàn</li>
+                <li>AirCover</li>
+                <li>Chống phân biệt đối xử</li>
+                <li>Hỗ trợ người khuyết tật</li>
+                <li>Các tùy chọn hủy</li>
+                <li>Báo cáo lo ngại của khu dân cư</li>
+              </ul>
             </section>
-
             <!-- Đón tiếp khách -->
             <section class="text-left">
-                <h3 class="font-semibold text-gray-900 mb-4">Đón tiếp khách</h3>
-                <ul class="space-y-3 text-sm text-gray-600 cursor-pointer">
-                    <li>Cho thuê nhà trên Airbnb</li>
-                    <li>Đưa trải nghiệm của bạn lên Airbnb</li>
-                    <li>Đưa dịch vụ của bạn lên Airbnb</li>
-                    <li>AirCover cho host</li>
-                    <li>Tài nguyên về đón tiếp khách</li>
-                    <li>Diễn đàn cộng đồng</li>
-                    <li>Đón tiếp khách có trách nhiệm</li>
-                    <li>Tham gia khóa học miễn phí về công việc Đón tiếp khách</li>
-                    <li>Tìm host hỗ trợ</li>
-                    <li>Giới thiệu chủ nhà</li>
-                </ul>
+              <h3 class="font-semibold text-gray-900 mb-4">Đón tiếp khách</h3>
+              <ul class="space-y-3 text-sm text-gray-600 cursor-pointer">
+                <li>Cho thuê nhà trên Airbnb</li>
+                <li>Đưa trải nghiệm của bạn lên Airbnb</li>
+                <li>Đưa dịch vụ của bạn lên Airbnb</li>
+                <li>AirCover cho host</li>
+                <li>Tài nguyên về đón tiếp khách</li>
+                <li>Diễn đàn cộng đồng</li>
+                <li>Đón tiếp khách có trách nhiệm</li>
+                <li>Tham gia khóa học miễn phí về công việc Đón tiếp khách</li>
+                <li>Tìm host hỗ trợ</li>
+                <li>Giới thiệu chủ nhà</li>
+              </ul>
             </section>
-
             <!-- Airbnb -->
             <section class="text-left">
-                <h3 class="font-semibold text-gray-900 mb-4">Airbnb</h3>
-                <ul class="space-y-3 text-sm text-gray-600 cursor-pointer">
-                    <li>Bản phát hành Mùa hè 2025</li>
-                    <li>Trang tin tức</li>
-                    <li>Cơ hội nghề nghiệp</li>
-                    <li>Nhà đầu tư</li>
-                    <li>Chỗ ở khẩn cấp Airbnb.org</li>
-                </ul>
+              <h3 class="font-semibold text-gray-900 mb-4">Airbnb</h3>
+              <ul class="space-y-3 text-sm text-gray-600 cursor-pointer">
+                <li>Bản phát hành Mùa hè 2025</li>
+                <li>Trang tin tức</li>
+                <li>Cơ hội nghề nghiệp</li>
+                <li>Nhà đầu tư</li>
+                <li>Chỗ ở khẩn cấp Airbnb.org</li>
+              </ul>
             </section>
-
+          </div>
         </div>
-    </div>
-
-    <!-- Bottom bar -->
-    <div class="border-t">
-        <div class="mx-auto px-8 py-6 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-600">
-
+        <!-- Bottom bar -->
+        <div class="border-t">
+          <div class="mx-auto px-8 py-6 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-600">
             <!-- Left items -->
             <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                <span>© 2025 Airbnb, Inc.</span>
-                <span>Quyền riêng tư</span>
-                <span>Điều khoản</span>
+              <span>© 2025 Airbnb, Inc.</span>
+              <span>Quyền riêng tư</span>
+              <span>Điều khoản</span>
             </div>
-
             <!-- Right items -->
             <div class="flex items-center gap-4 mt-4 sm:mt-0">
-                <button class="flex items-center gap-1">
-                    <span class="material-icons text-base">public</span> Tiếng Việt (VN)
-                </button>
-
-                <span>₫ VND</span>
-
-                <div class="flex items-center gap-3 text-xl">
-                    <i class="fab fa-facebook"></i>
-                    <i class="fab fa-x-twitter"></i>
-                    <i class="fab fa-instagram"></i>
-                </div>
+              <button class="flex items-center gap-1">
+                <span class="material-icons text-base">public</span> Tiếng Việt (VN) </button>
+              <span>₫ VND</span>
+              <div class="flex items-center gap-3 text-xl">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-x-twitter"></i>
+                <i class="fab fa-instagram"></i>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-</footer>
-
-
+      </footer>
     </main>
-    <script>
-      const swiper = new Swiper('.featuredSwiper', {
-        loop: false,
-        spaceBetween: 20,
-        slidesPerView: 1.2,
-        navigation: {
-          nextEl: '.swiper-button-next-featured',
-          prevEl: '.swiper-button-prev-featured',
-        },
-        breakpoints: {
-          640: {
-            slidesPerView: 2
-          },
-          768: {
-            slidesPerView: 2.5
-          },
-          1024: {
-            slidesPerView: 3
-          },
-          1280: {
-            slidesPerView: 4
-          },
-        }
-      });
-      // Top yêu thích
-      const topSwiper = new Swiper('.topFavoriteSwiper', {
-        loop: false,
-        spaceBetween: 20,
-        slidesPerView: 1.2,
-        navigation: {
-          nextEl: '.swiper-button-next-top',
-          prevEl: '.swiper-button-prev-top',
-        },
-        breakpoints: {
-          640: {
-            slidesPerView: 2
-          },
-          768: {
-            slidesPerView: 2.5
-          },
-          1024: {
-            slidesPerView: 3
-          },
-          1280: {
-            slidesPerView: 4
-          },
-        }
-      });
-      // Mới đăng
-      const newSwiper = new Swiper('.newListingsSwiper', {
-        loop: false,
-        spaceBetween: 20,
-        slidesPerView: 1.2,
-        navigation: {
-          nextEl: '.swiper-button-next-new',
-          prevEl: '.swiper-button-prev-new',
-        },
-        breakpoints: {
-          640: {
-            slidesPerView: 2
-          },
-          768: {
-            slidesPerView: 2.5
-          },
-          1024: {
-            slidesPerView: 3
-          },
-          1280: {
-            slidesPerView: 4
-          },
-        }
-      });
-    </script>
   </body>
 </html>

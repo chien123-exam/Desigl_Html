@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Góc Chill - Find Your Next Home</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#3ddb97",
+              "background-light": "#f6f8f7",
+              "background-dark": "#12201a",
+            },
+            fontFamily: {
+              "display": ["Be Vietnam Pro"]
+            },
+            borderRadius: {
+              "DEFAULT": "0.25rem",
+              "lg": "0.5rem",
+              "xl": "0.75rem",
+              "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL'0, 'wght'400, 'GRAD'0, 'opsz'24;
+      }
+    </style>
+  </head>
+  <body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+    <!-- HEADER GIỮ NGUYÊN -->
+    <header class="sticky top-0 z-50 flex items-center justify-between w-full h-16 px-4 bg-[#E8F8F5] shadow-[0_2px_4px_rgba(208,236,231,0.5)]">
+      <!-- Left Section -->
+      <div class="flex items-center gap-2">
+        <div class="flex items-center justify-center size-10 bg-[#3DDC97] rounded-full text-white">
+          <span class="material-symbols-outlined text-2xl">cottage</span>
+        </div>
+        <div class="relative hidden sm:flex items-center">
+          <div class="absolute left-3 text-[#333333]/60">
+            <span class="material-symbols-outlined text-xl">search</span>
+          </div>
+          <input class="w-64 h-10 pl-10 pr-4 rounded-full border-none bg-[#D0ECE7]/50 focus:ring-2 focus:ring-[#3DDC97]/50 placeholder-[#333333]/60 text-[#333333]" placeholder="Search Góc Chill" type="text" />
+        </div>
+      </div>
+      <!-- Center Section -->
+      <nav class="hidden lg:flex flex justify-center items-stretch h-full">
+        <ul class="flex items-center space-x-2">
+          <li>
+            <a class="active flex items-center justify-center h-full px-8 xl:px-12 relative group" href="index.html">
+              <span class="material-symbols-outlined text-3xl text-[#333333]/80 group-hover:text-[#3DDC97]">home</span>
+              <div class="absolute bottom-0 h-1 w-full bg-[#3DDC97] rounded-t-full"></div>
+            </a>
+          </li>
+          <li>
+            <a class="flex items-center justify-center h-full px-8 xl:px-12 rounded-lg hover:bg-[#C9F3E5] transition-colors duration-200 group" href="detail.html">
+              <span class="material-symbols-outlined text-3xl text-[#333333]/80 group-hover:text-[#3DDC97]">explore</span>
+            </a>
+          </li>
+          <li>
+            <a class="flex items-center justify-center h-full px-8 xl:px-12 rounded-lg hover:bg-[#C9F3E5] transition-colors duration-200 group" href="user_page.html">
+              <span class="material-symbols-outlined text-3xl text-[#333333]/80 group-hover:text-[#3DDC97]">group</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Right Section -->
+      <div class="flex items-center gap-2">
+        <!-- Chat -->
+        <button class="flex items-center justify-center h-full rounded-lg hover:bg-[#C9F3E5] transition-colors duration-200 group">
+          <span class="material-symbols-outlined text-3xl text-[#333333]/80 group-hover:text-[#3DDC97]"> chat </span>
+        </button>
+        <!-- Notifications -->
+        <button class="flex items-center justify-center h-full rounded-lg hover:bg-[#C9F3E5] transition-colors duration-200 group">
+          <span class="material-symbols-outlined text-3xl text-[#333333]/80 group-hover:text-[#3DDC97]"> notifications </span>
+        </button>
+        <!-- Apps button -->
+        <button class="flex items-center justify-center size-10 rounded-full bg-[#D0ECE7]/50 hover:bg-[#C9F3E5] text-[#333333] transition-colors duration-200">
+          <span class="material-symbols-outlined">apps</span>
+        </button>
+        <!-- Avatar -->
+        <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBCkkQUrS1Nzi0NKTCQp0Lmfe8hluXZR9bAF8Qj4VRJobq1jGx9JGyFXRA0NYfbBBoeHJ4vWbAXPwN51uOK7ipXC-_GMng4RiKja6X3dimdaxifqHdPMazNdbbQuvXYmHxnRKwCnFqlgwTR8evC36sFLVSeqEP6l_L2O0Q_lauf5cSqit7yKE6mOd2BVvO-pwYhLM9PprTwsSOTHjjiPmNuaWm4xHybIMwWDUqblyibueOo__0xYnQZy0RMsT1fMuAn_10C4Pgd4JI");'></div>
+        <!-- Dropdown arrow -->
+        <button class="flex items-center justify-center size-10 rounded-full bg-[#D0ECE7]/50 hover:bg-[#C9F3E5] text-[#333333] transition-colors duration-200">
+          <span class="material-symbols-outlined">arrow_drop_down</span>
+        </button>
+      </div>
+    </header>
+    <main class="p-4 sm:p-8 mx-auto space-y-12">
+      <div class="flex flex-wrap justify-between gap-3 mb-6">
+        <div class="flex min-w-72 flex-col gap-2">
+          <p class="text-4xl font-black leading-tight tracking-[-0.033em] text-gray-900 dark:text-white">Find Your Next Home</p>
+          <p class="text-base font-normal leading-normal text-gray-600 dark:text-gray-400">Search for rental properties by address, city, or keywords.</p>
+        </div>
+      </div>
+      <div class="mb-6">
+        <label class="flex flex-col min-w-40 h-14 w-full">
+          <div class="flex w-full flex-1 items-stretch rounded-xl h-full shadow-sm">
+            <div class="text-gray-500 dark:text-gray-400 flex items-center justify-center pl-4 bg-white dark:bg-gray-800 rounded-l-xl">
+              <span class="material-symbols-outlined">search</span>
+            </div>
+            <input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden text-gray-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border-none bg-white dark:bg-gray-800 h-full placeholder:text-gray-500 dark:placeholder:text-gray-400 px-4 pl-2 text-base font-normal leading-normal" placeholder="Search by address, city, or keyword..." value="" />
+            <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-r-xl h-full px-6 bg-primary text-gray-900 text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
+              <span class="truncate">Search</span>
+            </button>
+          </div>
+        </label>
+      </div>
+      <div class="flex gap-3 mb-8 overflow-x-auto pb-2">
+        <button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary/20 dark:bg-primary/30 pl-4 pr-2 hover:bg-primary/30 dark:hover:bg-primary/40 transition-colors">
+          <p class="text-gray-900 dark:text-white text-sm font-medium leading-normal">All types</p>
+          <span class="material-symbols-outlined text-gray-900 dark:text-white text-lg">arrow_drop_down</span>
+        </button>
+        <button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 pl-4 pr-2 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+          <p class="text-gray-800 dark:text-gray-200 text-sm font-medium leading-normal">Pet-Friendly</p>
+        </button>
+        <button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 pl-4 pr-2 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+          <p class="text-gray-800 dark:text-gray-200 text-sm font-medium leading-normal">Furnished</p>
+        </button>
+        <button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 pl-4 pr-2 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+          <p class="text-gray-800 dark:text-gray-200 text-sm font-medium leading-normal">Near University</p>
+        </button>
+        <button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 pl-4 pr-2 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+          <p class="text-gray-800 dark:text-gray-200 text-sm font-medium leading-normal">Apartment</p>
+        </button>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <aside class="lg:col-span-3">
+          <div class="sticky top-24">
+            <h2 class="text-gray-900 dark:text-white text-xl font-bold leading-tight tracking-[-0.015em] pb-3 pt-1">Filter Results</h2>
+            <div class="space-y-6">
+              <div>
+                <h3 class="font-bold text-gray-800 dark:text-gray-200 mb-2">Price Range</h3>
+                <div class="relative h-2 bg-gray-200 dark:bg-gray-700 rounded-full">
+                  <div class="absolute h-2 bg-primary rounded-full" style="left: 10%; right: 30%;"></div>
+                  <div class="absolute -top-1.5 w-5 h-5 bg-white dark:bg-gray-200 border-2 border-primary rounded-full cursor-pointer" style="left: 10%;"></div>
+                  <div class="absolute -top-1.5 w-5 h-5 bg-white dark:bg-gray-200 border-2 border-primary rounded-full cursor-pointer" style="left: 70%;"></div>
+                </div>
+                <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400 mt-2">
+                  <span>$500</span>
+                  <span>$5,000</span>
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 dark:text-gray-200 mb-2">Property Type</h3>
+                <div class="space-y-2">
+                  <label class="flex items-center space-x-2 cursor-pointer">
+                    <input class="form-checkbox h-4 w-4 rounded text-primary bg-gray-200 dark:bg-gray-700 border-gray-300 dark:border-gray-600 focus:ring-primary/50" type="checkbox" />
+                    <span class="text-gray-800 dark:text-gray-200">Apartment</span>
+                  </label>
+                  <label class="flex items-center space-x-2 cursor-pointer">
+                    <input checked="" class="form-checkbox h-4 w-4 rounded text-primary bg-gray-200 dark:bg-gray-700 border-gray-300 dark:border-gray-600 focus:ring-primary/50" type="checkbox" />
+                    <span class="text-gray-800 dark:text-gray-200">Private Room</span>
+                  </label>
+                  <label class="flex items-center space-x-2 cursor-pointer">
+                    <input class="form-checkbox h-4 w-4 rounded text-primary bg-gray-200 dark:bg-gray-700 border-gray-300 dark:border-gray-600 focus:ring-primary/50" type="checkbox" />
+                    <span class="text-gray-800 dark:text-gray-200">House</span>
+                  </label>
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 dark:text-gray-200 mb-2">Rating</h3>
+                <div class="flex items-center space-x-1 text-yellow-400">
+                  <span class="material-symbols-outlined cursor-pointer">star</span>
+                  <span class="material-symbols-outlined cursor-pointer">star</span>
+                  <span class="material-symbols-outlined cursor-pointer">star</span>
+                  <span class="material-symbols-outlined cursor-pointer">star</span>
+                  <span class="material-symbols-outlined text-gray-300 dark:text-gray-600 cursor-pointer">star_border</span>
+                  <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">&amp; up</span>
+                </div>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 dark:text-gray-200 mb-2">Amenities</h3>
+                <div class="space-y-2">
+                  <label class="flex items-center space-x-2 cursor-pointer">
+                    <input checked="" class="form-checkbox h-4 w-4 rounded text-primary bg-gray-200 dark:bg-gray-700 border-gray-300 dark:border-gray-600 focus:ring-primary/50" type="checkbox" />
+                    <span class="text-gray-800 dark:text-gray-200">Wi-Fi</span>
+                  </label>
+                  <label class="flex items-center space-x-2 cursor-pointer">
+                    <input class="form-checkbox h-4 w-4 rounded text-primary bg-gray-200 dark:bg-gray-700 border-gray-300 dark:border-gray-600 focus:ring-primary/50" type="checkbox" />
+                    <span class="text-gray-800 dark:text-gray-200">A/C</span>
+                  </label>
+                  <label class="flex items-center space-x-2 cursor-pointer">
+                    <input checked="" class="form-checkbox h-4 w-4 rounded text-primary bg-gray-200 dark:bg-gray-700 border-gray-300 dark:border-gray-600 focus:ring-primary/50" type="checkbox" />
+                    <span class="text-gray-800 dark:text-gray-200">Parking</span>
+                  </label>
+                </div>
+              </div>
+              <div class="flex flex-col gap-2 pt-4">
+                <button class="w-full flex items-center justify-center rounded-lg h-10 px-4 bg-primary text-gray-900 text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity"> Apply Filters </button>
+                <button class="w-full flex items-center justify-center rounded-lg h-10 px-4 bg-transparent text-gray-600 dark:text-gray-400 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"> Reset </button>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <div class="lg:col-span-9">
+          <div class="flex flex-col sm:flex-row justify-between items-center mb-4">
+            <p class="text-gray-800 dark:text-gray-200 mb-2 sm:mb-0">Showing 25 results</p>
+            <div class="flex items-center gap-4">
+              <div class="flex items-center gap-1">
+                <button class="p-2 rounded-lg bg-primary/20 dark:bg-primary/30 text-gray-900 dark:text-white">
+                  <span class="material-symbols-outlined">grid_view</span>
+                </button>
+                <button class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800">
+                  <span class="material-symbols-outlined">view_list</span>
+                </button>
+              </div>
+              <div class="relative">
+                <select class="form-select appearance-none block w-full pl-3 pr-8 py-2 text-base font-normal text-gray-800 dark:text-gray-200 bg-white dark:bg-gray-800 bg-clip-padding bg-no-repeat border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50">
+                  <option>Sort by: Newest</option>
+                  <option>Price (Low to High)</option>
+                  <option>Price (High to Low)</option>
+                  <option>Highest Rating</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700 dark:text-gray-300">
+                  <span class="material-symbols-outlined text-lg">expand_more</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-6">
+            <!-- CARD 1 -->
+            <div class="group relative flex flex-col overflow-hidden rounded-2xl bg-white border border-gray-200 shadow transition hover:shadow-lg">
+              <a href="./detail.html">
+                <div class="relative h-56">
+                  <img src="https://images.unsplash.com/photo-1706808849780-7a04fbac83ef?w=500" class="absolute inset-0 w-full h-full object-cover" />
+                  <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold text-white bg-green-600">Được khách yêu thích</span>
+                  <button class="absolute top-3 right-3 w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow">
+                    <span class="material-symbols-outlined text-red-500">favorite</span>
+                  </button>
+                </div>
+              </a>
+              <a href="./detail.html">
+                <div class="p-5">
+                  <h3 class="font-bold text-lg mb-2 line-clamp-2">Studio view sông Sài Gòn</h3>
+                  <p class="text-gray-600 flex items-center gap-1 text-sm mb-3">
+                    <span class="material-symbols-outlined text-lg">location_on</span> Quận 1, TP.HCM
+                  </p>
+                  <div class="flex gap-4 text-sm text-gray-600 mb-4">
+                    <span class="flex items-center gap-1">
+                      <span class="material-symbols-outlined text-lg">bed</span> Studio </span>
+                    <span class="flex items-center gap-1">
+                      <span class="material-symbols-outlined text-lg">bathroom</span> 1 WC </span>
+                    <span class="flex items-center gap-1">
+                      <span class="material-symbols-outlined text-lg">square_foot</span> 45m² </span>
+                  </div>
+                  <div class="flex items-center justify-between border-t pt-4 mb-4">
+                    <div class="flex items-center gap-3">
+                      <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=100" class="w-10 h-10 rounded-full object-cover" />
+                      <div>
+                        <p class="font-semibold text-sm">Chủ nhà</p>
+                        <p class="text-xs text-gray-500">đ760.000 cho 2 đêm</p>
+                      </div>
+                    </div>
+                    <div class="text-right">
+                      <p class="font-bold text-lg text-green-600">5.0</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-1 text-yellow-500">
+                    <span class="material-symbols-outlined text-lg">star</span>
+                    <span class="font-semibold">5.0</span>
+                    <span class="text-sm text-gray-500">(245)</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- CARD 2 -->
+            <div class="group relative flex flex-col overflow-hidden rounded-2xl bg-white border border-gray-200 shadow transition hover:shadow-lg">
+              <div class="relative h-56">
+                <img src="https://images.unsplash.com/photo-1618773540045-8b2c5f31e5e5?w=500" class="absolute inset-0 w-full h-full object-cover" />
+                <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold text-white bg-green-600">Được khách yêu thích</span>
+                <button class="absolute top-3 right-3 w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow">
+                  <span class="material-symbols-outlined text-red-500">favorite</span>
+                </button>
+              </div>
+              <div class="p-5">
+                <h3 class="font-bold text-lg mb-2 line-clamp-2">Phòng chung gần trung tâm</h3>
+                <p class="text-gray-600 flex items-center gap-1 text-sm mb-3">
+                  <span class="material-symbols-outlined text-lg">location_on</span> Quận 3, TP.HCM
+                </p>
+                <div class="flex gap-4 text-sm text-gray-600 mb-4">
+                  <span class="flex items-center gap-1">
+                    <span class="material-symbols-outlined text-lg">bed</span> Chung </span>
+                  <span class="flex items-center gap-1">
+                    <span class="material-symbols-outlined text-lg">bathroom</span> 1 WC </span>
+                  <span class="flex items-center gap-1">
+                    <span class="material-symbols-outlined text-lg">square_foot</span> 20m² </span>
+                </div>
+                <div class="flex items-center justify-between border-t pt-4 mb-4">
+                  <div class="flex items-center gap-3">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" class="w-10 h-10 rounded-full object-cover" />
+                    <div>
+                      <p class="font-semibold text-sm">Chủ nhà</p>
+                      <p class="text-xs text-gray-500">đ860.000 cho 2 đêm</p>
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <p class="font-bold text-lg text-green-600">5.0</p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-1 text-yellow-500">
+                  <span class="material-symbols-outlined text-lg">star</span>
+                  <span class="font-semibold">4.9</span>
+                  <span class="text-sm text-gray-500">(189)</span>
+                </div>
+              </div>
+            </div>
+            <!-- Tự copy thêm 5 card nữa y như vậy nếu cần -->
+          </div>
+          <nav aria-label="Pagination" class="flex items-center justify-center pt-8 mt-8 border-t border-gray-200 dark:border-gray-700">
+            <ul class="inline-flex items-center -space-x-px text-sm">
+              <li>
+                <a class="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-s-lg hover:bg-gray-100 dark:hover:bg-gray-700" href="#">Previous</a>
+              </li>
+              <li>
+                <a class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700" href="#">1</a>
+              </li>
+              <li>
+                <a aria-current="page" class="flex items-center justify-center px-3 h-8 text-primary bg-primary/20 dark:bg-primary/30 border border-gray-300 dark:border-gray-600" href="#">2</a>
+              </li>
+              <li>
+                <a class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700" href="#">3</a>
+              </li>
+              <li>
+                <a class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700" href="#">...</a>
+              </li>
+              <li>
+                <a class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-e-lg hover:bg-gray-100 dark:hover:bg-gray-700" href="#">Next</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
